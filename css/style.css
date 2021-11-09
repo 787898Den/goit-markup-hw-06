@@ -213,11 +213,10 @@ button {
 }
 .text-team {
   text-align: center;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 16px;
+  line-height: 1.87;
   letter-spacing: 0.03em;
-  color: var(--primary-title-color);
+  color: var(--primary-text-color);
   margin-bottom: 16px;
 }
 .social-item {
@@ -273,14 +272,14 @@ button {
 }
 .clients-list {
   display: flex;
-  justify-content: center;
-  text-align: center;
+  margin-right: -30px;
 }
 .clients-item {
   width: 170px;
   height: 92px;
   margin-right: 30px;
 }
+
 .clients-link {
   display: flex;
   width: 100%;
@@ -334,7 +333,7 @@ button {
 .heading-button:focus {
   color: var(--fourth-text-color);
   background-color: var(--accent-color);
-  drop-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
+  box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
   transition: color 250ms var(--transition-timing);
 }
 .filters-list {
@@ -571,7 +570,6 @@ button {
   justify-content: center;
   transition: color 250ms var(--transition-timing);
 }
-
 .footer-form-title {
   margin-bottom: 20px;
   font-weight: 700;
@@ -628,7 +626,7 @@ button {
   background-color: inherit;
   cursor: pointer;
 }
-.modal-button :hover,
+.modal-button:hover,
 .modal-button:focus {
   fill: var(--accent-color);
 }
@@ -636,7 +634,6 @@ button {
   display: flex;
   position: absolute;
   width: 528px;
-  height: 581px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1) rotate(0deg);
@@ -697,8 +694,13 @@ button {
     color 250ms var(--transition-timing),
     box-shadow 250ms 0px 4px 4px rgb(0 0 0 /0.25);
 }
-.modal-form-button:hover,
-.modal-form-button:focus {
+.modal-form-button :focus {
+  transition: background-color 250ms var(--transition-timing),
+    color 250ms var(--transition-timing),
+    box-shadow 250ms 0px 4px 4px rgb(0 0 0 /0.25);
+}
+.modal-form-button :hover,
+.modal-form-button :focus {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .form-input-wrap {
@@ -716,6 +718,7 @@ button {
 .modal-form-input:focus {
   outline: none;
   border-color: var(--accent-color);
+  transition: border-color 250ms var(--transition-timing);
 }
 .modal-form-input-icon {
   position: absolute;
@@ -766,6 +769,8 @@ button {
 .modal-form-message:focus {
   outline: none;
   border-color: var(--accent-color);
+  transition: border-color 250ms var(--transition-timing),
+    outline 250ms var(--transition-timing);
 }
 .modal-form-label-checkbox {
   display: flex;
@@ -801,18 +806,26 @@ button {
   margin-right: 7px;
   border: 2px solid #303030;
   border-radius: 3px;
-
-  transition: background-color 250ms var(--transition-timing),
-    background-image 250ms var(--transition-timing),
-    border-color 250ms var(--transition-timing);
 }
 .modal-form-checkbox:checked + .modal-form-label-checkbox::before {
   border: none;
   background-color: var(--accent-color);
   background-image: url(/image/check-box.svg);
-  background-size: 13px 10px;
   background-repeat: no-repeat;
   background-position: center;
+  transition: background-color 250ms var(--transition-timing),
+    background-image 250ms var(--transition-timing),
+    border-color 250ms var(--transition-timing);
+}
+.modal-form-checkbox:focus + .modal-form-label-checkbox::before {
+  border: none;
+  background-color: var(--accent-color);
+  background-image: url(/image/check-box.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-color 250ms var(--transition-timing),
+    background-image 250ms var(--transition-timing),
+    border-color 250ms var(--transition-timing);
 }
 .checkbox-link {
   margin-left: 5px;
