@@ -809,22 +809,21 @@ button {
 }
 .modal-form-checkbox:checked + .modal-form-label-checkbox::before {
   border: none;
-  background-color: var(--accent-color);
-  background-image: url(/image/check-box.svg);
+
+  background-image: url(/image/icon-check-box.svg);
+  background-size: 16px 15px;
   background-repeat: no-repeat;
   background-position: center;
-  transition: background-color 250ms var(--transition-timing),
-    background-image 250ms var(--transition-timing),
+  transition: background-image 250ms var(--transition-timing),
     border-color 250ms var(--transition-timing);
 }
 .modal-form-checkbox:focus + .modal-form-label-checkbox::before {
   border: none;
-  background-color: var(--accent-color);
-  background-image: url(/image/check-box.svg);
+  background-image: url(/image/icon-check-box.svg);
   background-repeat: no-repeat;
   background-position: center;
-  transition: background-color 250ms var(--transition-timing),
-    background-image 250ms var(--transition-timing),
+  background-size: 16px 15px;
+  transition: background-image 250ms var(--transition-timing),
     border-color 250ms var(--transition-timing);
 }
 .checkbox-link {
