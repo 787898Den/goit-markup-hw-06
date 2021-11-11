@@ -198,7 +198,7 @@ button {
 }
 .hero-title-about {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   margin-bottom: 10px;
@@ -824,13 +824,7 @@ button {
     border-color 250ms var(--transition-timing);
 }
 .modal-form-checkbox:focus + .modal-form-label-checkbox::before {
-  border: none;
-  background-image: url(../image/icon-check-box.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 16px 15px;
-  transition: background-image 250ms var(--transition-timing),
-    border-color 250ms var(--transition-timing);
+  outline: 2px solid var(--primary-title-color);
 }
 .checkbox-link {
   margin-left: 5px;
